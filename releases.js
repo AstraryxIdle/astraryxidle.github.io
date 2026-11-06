@@ -1,4 +1,4 @@
-import { siteConfig } from './config.js?v=20261106-v086';
+import { siteConfig } from './config.js?v=20261106-v0861-test';
 import { trackEvent } from './analytics.js';
 import { t } from './i18n.js?v=20261029-v082-final';
 
@@ -47,9 +47,12 @@ export function selectPublicApkRelease(list, options = {}) {
   if (!Array.isArray(list)) return null;
   const config = configuration(options);
   const candidates = [];
+  const excluded = new Set(Array.isArray(config.excludedReleaseTags)
+    ? config.excludedReleaseTags.map(tag => String(tag).trim().toLowerCase()) : []);
   for (const item of list) {
     if (!item || item.draft !== false || item.private === true || item.repository?.private === true || (item.visibility && item.visibility !== 'public')) continue;
     if (typeof item.tag_name !== 'string' || !item.tag_name.trim() || typeof item.published_at !== 'string') continue;
+    if (excluded.has(item.tag_name.trim().toLowerCase())) continue;
     const published = Date.parse(item.published_at);
     if (!Number.isFinite(published) || !Array.isArray(item.assets)) continue;
     const apk = item.assets.find(asset => asset && typeof asset.name === 'string' && /\.apk$/i.test(asset.name)

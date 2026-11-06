@@ -64,6 +64,15 @@ test('accepts a published public Beta prerelease', () => {
   assert.equal(selected.tagName, 'v0.6.0-beta');
 });
 
+test('keeps public v0.8.6.1 test APK out of the site while preserving v0.8.6', () => {
+  const previous = release({ tag_name: 'v0.8.6', published_at: '2026-11-06T05:24:11Z' });
+  const testBuild = release({ tag_name: 'v0.8.6.1', prerelease: true, published_at: '2026-11-06T07:00:00Z' });
+  const select = exported('selectPublicApkRelease');
+  assert.equal(select([testBuild, previous]).tagName, 'v0.8.6');
+  assert.equal(select([testBuild]), null);
+  assert.equal(select([testBuild, previous], { excludedReleaseTags: [] }).tagName, 'v0.8.6.1');
+});
+
 test('does not make draft or explicitly private releases available', () => {
   const select = exported('selectPublicApkRelease');
   for (const rejected of [release({ draft: true }), release({ private: true }), release({ repository: { private: true } }), release({ visibility: 'private' })]) {

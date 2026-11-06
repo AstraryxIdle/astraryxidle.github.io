@@ -8,6 +8,8 @@ export const siteConfig = Object.freeze({
   siteUrl: 'https://astraryxidle.github.io/',
   // Public GA4 measurement ID. Events are sent only after visitors opt in.
   ga4MeasurementId: 'G-SZHF2LMYG0',
+  // These test APKs remain available via the app update feed but not the site download widget.
+  excludedReleaseTags: ['v0.8.6.1'],
   previewVersion: '0.8.6',
   previewStatus: 'published',
   // Resolved against this module directory, so deep pages work in GitHub Pages.
