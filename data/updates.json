@@ -3,6 +3,19 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.6",
+      "slug": "v0.8.6",
+      "title": "Uma nova força. Uma nova jornada.",
+      "title_origin": "Notas da versão Beta pública v0.8.6",
+      "summary": "Grondar, balanceamento de heróis e bosses, Arena e runas, conquistas, desempenho e melhorias do instalador.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-06T05:24:11Z",
+      "document_date": "2026-11-06",
+      "path": "updates/v0.8.6/index.html"
+    },
+    {
       "version": "0.8.2",
       "slug": "v0.8.2",
       "title": "A Arena ganha vida.",

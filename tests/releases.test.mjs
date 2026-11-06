@@ -120,17 +120,17 @@ test('untrusted older release notes URLs are omitted', () => {
   assert.equal(selected.releaseUrl, null);
 });
 
-test('V0.8.2 tags resolve notes against the module root, including Beta suffixes', () => {
+test('V0.8.6 tags resolve notes against the module root, including Beta suffixes', () => {
   const select = exported('selectPublicApkRelease');
-  for (const tag of ['v0.8.2', '0.8.2', 'v0.8.2-beta.1']) {
+  for (const tag of ['v0.8.6', '0.8.6', 'v0.8.6-beta.1']) {
     const selected = select([release({ tag_name: tag })]);
-    assert.equal(selected.notesUrl, new URL('../updates/v0.8.2/index.html', import.meta.url).href);
+    assert.equal(selected.notesUrl, new URL('../updates/v0.8.6/index.html', import.meta.url).href);
   }
   assert.equal(select([release({ tag_name: 'v0.6.01' })]).notesUrl, `${repository}/releases/tag/v0.5.2`);
 });
 
 test('a standalone notes package can configure the module-relative notes path', () => {
-  const selected = exported('selectPublicApkRelease')([release({ tag_name: 'v0.8.2' })], { notesPath: 'index.html' });
+  const selected = exported('selectPublicApkRelease')([release({ tag_name: 'v0.8.6' })], { notesPath: 'index.html' });
   assert.equal(selected.notesUrl, new URL('../index.html', import.meta.url).href);
 });
 
@@ -269,15 +269,15 @@ test('retry becomes visible from the actual initially hidden HTML state', () => 
 test('accepts a valid APK from the dedicated distribution repository', () => {
   const currentRepo = 'https://github.com/AstraryxIdle/astraryx-releases';
   const latest = release({
-    tag_name: 'v0.8.2', published_at: '2026-10-29T21:00:00Z',
-    html_url: `${currentRepo}/releases/tag/v0.8.2`,
-    assets: [asset({ name: 'Astraryx-v0.8.2.apk',
-      browser_download_url: `${currentRepo}/releases/download/v0.8.2/Astraryx-v0.8.2.apk` })],
+    tag_name: 'v0.8.6', published_at: '2026-10-29T21:00:00Z',
+    html_url: `${currentRepo}/releases/tag/v0.8.6`,
+    assets: [asset({ name: 'Astraryx-v0.8.6.apk',
+      browser_download_url: `${currentRepo}/releases/download/v0.8.6/Astraryx-v0.8.6.apk` })],
   });
   const selected = exported('selectPublicApkRelease')([latest]);
-  assert.equal(selected.tagName, 'v0.8.2');
-  assert.equal(selected.downloadUrl, `${currentRepo}/releases/download/v0.8.2/Astraryx-v0.8.2.apk`);
-  assert.equal(selected.notesUrl, new URL('../updates/v0.8.2/index.html', import.meta.url).href);
+  assert.equal(selected.tagName, 'v0.8.6');
+  assert.equal(selected.downloadUrl, `${currentRepo}/releases/download/v0.8.6/Astraryx-v0.8.6.apk`);
+  assert.equal(selected.notesUrl, new URL('../updates/v0.8.6/index.html', import.meta.url).href);
 });
 
 test('uses the legacy repository only if the distribution repo has no public APK', async () => {
