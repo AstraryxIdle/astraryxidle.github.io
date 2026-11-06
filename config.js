@@ -8,10 +8,10 @@ export const siteConfig = Object.freeze({
   siteUrl: 'https://astraryxidle.github.io/',
   // Public GA4 measurement ID. Events are sent only after visitors opt in.
   ga4MeasurementId: 'G-SZHF2LMYG0',
-  previewVersion: '0.8.2',
+  previewVersion: '0.8.6',
   previewStatus: 'published',
   // Resolved against this module directory, so deep pages work in GitHub Pages.
   // The local notes path is used when the published APK matches previewVersion.
-  notesPath: 'updates/v0.8.2/index.html',
+  notesPath: 'updates/v0.8.6/index.html',
   requestTimeoutMs: 8000,
 });
