@@ -8,6 +8,8 @@
 <link rel="canonical" href="https://astraryxidle.github.io/updates/v0.8.6/">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="article">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:title" content="Astraryx Idle v0.8.6 — Uma nova força. Uma nova jornada.">
 <meta property="og:description" content="Grondar, balanceamento de heróis e bosses, Arena, conquistas e instalador Android.">
 <meta property="og:url" content="https://astraryxidle.github.io/updates/v0.8.6/">
@@ -15,6 +17,7 @@
 <link rel="icon" href="../../assets/branding/emblem.webp" type="image/webp">
 <link rel="stylesheet" href="../../assets/css/analytics-consent.css">
 <script type="module" src="../../app.js?v=20261106-v086"></script>
+<script type="module" src="./lang.js?v=20261107-en"></script>
 <title>Astraryx Idle — Notas da atualização v0.8.6</title>
 <style>
 :root{--ink:#152737;--muted:#536471;--paper:#f5f3ed;--line:#d9ddd9;--navy:#071a2b;--gold:#bf954b;--gold-light:#efd59c;--teal:#116f61;--red:#a14342;--blue:#345f8c;--violet:#7655a8;--max:1272px}
@@ -26,12 +29,19 @@
 @media(max-width:540px){.section-head{flex-direction:column-reverse;align-items:flex-start;gap:12px}.section-head>div{min-width:0;max-width:100%}.toolbar label{display:block;width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{body{background:white;color:#122533;font-size:10pt}.topbar,.hero-links,.toolbar,.toc,.progress,.footer a,.source-note{display:none}.hero{min-height:300px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.hero-content{padding:25px}.hero h1{font-size:43px}.hero-desc{font-size:12px}.hero-art{height:100%;width:60%}.hero .issue{margin-top:10px}.highlights{margin:0;padding:0;gap:0;grid-template-columns:repeat(4,1fr);print-color-adjust:exact}.highlight{padding:15px!important}.highlight strong{font-size:20px}.layout{display:block;padding:30px 15px}.section{padding:25px 0}.hero-entry,.boss-card,.system-card,.status-card,.gift{break-inside:avoid}.hero-entry[hidden]{display:grid}.boss-grid{grid-template-columns:repeat(3,1fr)}.boss-card{display:block}.hero-entry{padding:20px 0}.world-boss,.traffic,.install-card{print-color-adjust:exact;-webkit-print-color-adjust:exact}.gift details ul{columns:2}.footer{margin-top:20px}.footer-inner{padding:20px}.section h2{font-size:29px}.no-results,.result-count{display:none}}
+
+/* Language selector on editorial notes, aligned with the website's saved PT/EN setting. */
+.lang-switch{display:inline-flex;gap:2px;padding:3px;border:1px solid #6c7a86;flex-shrink:0}
+.lang-switch button{background:transparent;border:0;color:#c8d5df;font-size:11px;font-weight:700;letter-spacing:1px;line-height:1.2;padding:6px 8px;min-width:34px}
+.lang-switch button[aria-pressed="true"]{background:#efd59c;color:#071a2b}
+.lang-switch button:hover:not([aria-pressed="true"]){background:#22394b;color:white}
+@media(max-width:540px){.topmeta .top-label{display:none}.lang-switch{margin-right:8px}.lang-switch button{font-size:10px;padding:6px 5px;min-width:27px}.top-inner{gap:10px}}
 </style>
 </head>
 <body id="top">
 <a class="skip" href="#conteudo">Pular para as notas</a>
 <div class="progress" aria-hidden="true"></div>
-<header class="topbar"><div class="top-inner"><a class="brand" href="#top" aria-label="Astraryx Idle, início"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 1 24 15 39 20 25 24 20 39 15 25 1 20 15 15Z" stroke="#d5b776"/><path d="m20 8 4 12-4 12-4-12Z" fill="#d5b776"/><path d="m8 20 12-4 12 4-12 4Z" fill="#d5b776"/><circle cx="20" cy="20" r="15" stroke="#d5b776" opacity=".45"/></svg><div><strong>ASTRARYX</strong><span>IDLE</span></div></a><div class="topmeta"><span class="top-label">NOTAS DE ATUALIZAÇÃO</span><button class="outline-btn" id="print" type="button">Salvar em PDF ↗</button></div></div></header>
+<header class="topbar"><div class="top-inner"><a class="brand" href="#top" aria-label="Astraryx Idle, início"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M20 1 24 15 39 20 25 24 20 39 15 25 1 20 15 15Z" stroke="#d5b776"/><path d="m20 8 4 12-4 12-4-12Z" fill="#d5b776"/><path d="m8 20 12-4 12 4-12 4Z" fill="#d5b776"/><circle cx="20" cy="20" r="15" stroke="#d5b776" opacity=".45"/></svg><div><strong>ASTRARYX</strong><span>IDLE</span></div></a><div class="topmeta"><span class="top-label">NOTAS DE ATUALIZAÇÃO</span><div class="lang-switch" role="group" data-language-picker aria-label="Idioma do site"><button type="button" data-site-lang="pt-BR" aria-label="Português do Brasil" title="Português" aria-pressed="true">PT</button><button type="button" data-site-lang="en" aria-label="English" title="English" aria-pressed="false">EN</button></div><button class="outline-btn" id="print" type="button">Salvar em PDF ↗</button></div></div></header>
 <section class="hero" aria-labelledby="patch-title"><img class="hero-art" src="assets/patch-art-01.webp" alt="Mira em um salão astral, cercada por magia violeta e detalhes dourados" fetchpriority="high"><div class="hero-content"><span class="eyebrow">Atualização publicada · Android</span><h1 id="patch-title">Uma nova força.<br>Uma nova jornada.<span class="version">v0.8.6</span></h1><p class="hero-desc">Grondar chega ao campo de batalha. Heróis ganham novas possibilidades, a Arena fica mais prática e o jogo prepara o caminho para atualizar pelo próprio app.</p><div class="hero-links"><a class="primary-link" href="#conteudo">Explorar as mudanças ↓</a><a class="quiet-link" href="#atualizacoes">Como serão as próximas atualizações</a></div><p class="issue">06 NOV 2026 &nbsp; / &nbsp; EQUIPE ASTRARYX IDLE</p></div></section>
 <div class="highlights" aria-label="Destaques da atualização"><a class="highlight" href="#grondar"><small>Novo World Boss</small><strong>Grondar</strong><span>Um desafio para todo o servidor.</span></a><a class="highlight" href="#herois"><small>Balanceamento</small><strong>Heróis em foco</strong><span>Buffs, ajustes e novas interações.</span></a><a class="highlight" href="#conquistas"><small>Progressão</small><strong>226 níveis</strong><span>Menos repetição. Mais significado.</span></a><a class="highlight" href="#atualizacoes"><small>Próximo capítulo</small><strong>Atualize pelo app</strong><span>Instalador preparado para o futuro.</span></a></div>
 <div class="layout"><aside class="toc" aria-label="Nesta atualização"><span class="eyebrow">Nesta atualização</span><a href="#grondar">01 — World Boss</a><a href="#herois">02 — Heróis</a><a href="#efeitos">03 — Veneno e queima</a><a href="#bosses">04 — Bosses e mundos</a><a href="#arena">05 — Arena e runas</a><a href="#conquistas">06 — Conquistas</a><a href="#desempenho">07 — Desempenho</a><a href="#atualizacoes">08 — Atualizações</a><a href="#presente">09 — Presente</a><p class="toc-foot">Valores finais da preparação<br>v0.8.6 · 06/11/2026</p></aside>
@@ -59,9 +69,10 @@
 const entries=[...document.querySelectorAll('.hero-entry')], buttons=[...document.querySelectorAll('[data-filter]')], search=document.getElementById('search'), count=document.getElementById('result-count'), empty=document.getElementById('no-results');
 let selected='all';
 const plain=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-function filter(){const q=plain(search.value.trim());let shown=0;for(const entry of entries){const match=(selected==='all'||entry.dataset.tags.split(' ').includes(selected))&&plain(entry.textContent).includes(q);entry.hidden=!match;if(match)shown++;}count.textContent=`${shown} ${shown===1?'herói encontrado':'heróis encontrados'}`;empty.hidden=shown!==0;}
+function filter(){const q=plain(search.value.trim());let shown=0;for(const entry of entries){const match=(selected==='all'||entry.dataset.tags.split(' ').includes(selected))&&plain(entry.textContent).includes(q);entry.hidden=!match;if(match)shown++;}count.textContent=`${shown} ${document.documentElement.lang==='en'?(shown===1?'hero found':'heroes found'):(shown===1?'herói encontrado':'heróis encontrados')}`;empty.hidden=shown!==0;}
 for(const button of buttons){button.addEventListener('click',()=>{selected=button.dataset.filter;for(const other of buttons)other.setAttribute('aria-pressed',String(other===button));filter();});}
 search.addEventListener('input',filter);
+document.addEventListener('astraforge:languagechange',()=>queueMicrotask(filter));
 const bar=document.querySelector('.progress');let pending=false;function update(){const max=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(max>0?window.scrollY/max*100:0)+'%';pending=false;}window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(update);}},{passive:true});window.addEventListener('resize',update);update();
 if('IntersectionObserver'in window){const links=[...document.querySelectorAll('.toc a')];const observer=new IntersectionObserver(items=>{for(const item of items){if(item.isIntersecting){for(const link of links)link.classList.toggle('active',link.hash==='#'+item.target.id);}}},{rootMargin:'-5% 0px -70% 0px',threshold:0});document.querySelectorAll('.section').forEach(section=>observer.observe(section));}
 let printState=null;window.addEventListener('beforeprint',()=>{printState=entries.map(e=>e.hidden);entries.forEach(e=>e.hidden=false);});window.addEventListener('afterprint',()=>{if(printState)entries.forEach((e,i)=>e.hidden=printState[i]);printState=null;});document.getElementById('print').addEventListener('click',()=>window.print());
