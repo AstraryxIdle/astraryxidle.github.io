@@ -1,7 +1,7 @@
 // English localization for the Astraryx Idle v0.8.6 patch notes.
 // Original Portuguese copy and gameplay values stay in index.html.
 // Follows the shared website language preference (PT / EN).
-import { getLanguage } from '../../i18n.js?v=20261029-v082-final';
+import { getLanguage } from '../../i18n.js?v=20261107-v086-en';
 
 const strings = new Map([
   [
