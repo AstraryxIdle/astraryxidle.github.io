@@ -560,6 +560,23 @@ const english = {
   "Português do Brasil": "Brazilian Portuguese",
   "Português": "Portuguese"
 };
+
+// Editorial translation for the v0.8.6 launch on the homepage and update archive.
+Object.assign(english, {
+  "Monte cinco heróis, explore mundos e evolua sua equipe. Com a fase online iniciada na v0.8.0, a v0.8.6 amplia a aventura com o World Boss Grondar, balanceamento e melhorias da Arena.": "Assemble five heroes, explore worlds, and upgrade your team. Following the online launch in v0.8.0, v0.8.6 expands the adventure with the World Boss Grondar, balance changes, and Arena improvements.",
+  "06 NOV 2026 · V0.8.6 · WORLD BOSS": "NOV 6, 2026 · V0.8.6 · WORLD BOSS",
+  "Uma nova força. Uma nova jornada.": "A new power. A new journey.",
+  "Grondar, balanceamento de heróis e bosses, Arena, conquistas e melhorias do instalador. Confira as notas e o APK público mais recente.": "Grondar, hero and boss balance changes, Arena, achievements, and installer improvements. Read the notes and check the latest public APK.",
+  "ATUALIZAÇÃO EM DESTAQUE · V0.8.6": "FEATURED UPDATE · V0.8.6",
+  "A v0.8.6 apresenta Grondar, rebalanceamento de heróis e bosses, ajustes da Arena, conquistas e melhorias do instalador. O quadro ao lado confirma automaticamente o APK Android disponível no GitHub.": "Version 0.8.6 introduces Grondar, hero and boss balance changes, Arena adjustments, achievements, and installer improvements. The adjacent panel automatically verifies the Android APK available on GitHub.",
+  "Após o início da fase online, a v0.8.6 traz Grondar, melhorias de progressão e balanceamento, ajustes da Arena e do instalador. A disponibilidade do APK Android é confirmada automaticamente no quadro de download do site.": "Following the online launch, v0.8.6 brings Grondar, progression and balance changes, and Arena and installer improvements. Android APK availability is automatically verified in the site's download panel.",
+  "Notas v0.8.6 · World Boss": "v0.8.6 notes · World Boss",
+  "V0.8.6 · 06/11/2026": "V0.8.6 · Nov 6, 2026",
+  "Grondar, balanceamento de heróis e bosses, Arena e runas, conquistas, desempenho e melhorias para atualização do APK Android.": "Grondar, hero and boss balance changes, Arena and runes, achievements, performance, and Android APK update improvements.",
+  "Ler notas V0.8.6": "Read v0.8.6 notes",
+  "Histórico de atualizações Astraryx Idle: v0.8.6 com Grondar, balanceamento de heróis e bosses, Arena e conquistas, além das versões anteriores.": "Astraryx Idle update history: v0.8.6 with Grondar, hero and boss balance changes, Arena, achievements, and earlier versions.",
+  "Astraryx v0.8.6: Grondar, balanceamento dos heróis, Arena, conquistas e instalador de atualizações. APK Beta disponível no GitHub.": "Astraryx v0.8.6: Grondar, hero balancing, Arena, achievements, and the update installer. Beta APK available on GitHub."
+});
 const storageKey = 'astraforge_site_language_v1';
 const textSource = new WeakMap();
 const attributeSource = new WeakMap();
