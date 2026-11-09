@@ -3,6 +3,19 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.6.3",
+      "slug": "v0.8.6.3",
+      "title": "Um novo ciclo de desafios.",
+      "title_origin": "Notas oficiais da versão Beta pública v0.8.6.3",
+      "summary": "3 missões diárias, 5 semanais, recompensas em gemas, balanceamento de equipamentos e melhorias no Grondar, Arena PvP e estabilidade online.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-09T07:11:14Z",
+      "document_date": "2026-11-09",
+      "path": "updates/v0.8.6.3/index.html"
+    },
+    {
       "version": "0.8.6",
       "slug": "v0.8.6",
       "title": "Uma nova força. Uma nova jornada.",
