@@ -577,6 +577,37 @@ Object.assign(english, {
   "Histórico de atualizações Astraryx Idle: v0.8.6 com Grondar, balanceamento de heróis e bosses, Arena e conquistas, além das versões anteriores.": "Astraryx Idle update history: v0.8.6 with Grondar, hero and boss balance changes, Arena, achievements, and earlier versions.",
   "Astraryx v0.8.6: Grondar, balanceamento dos heróis, Arena, conquistas e instalador de atualizações. APK Beta disponível no GitHub.": "Astraryx v0.8.6: Grondar, hero balancing, Arena, achievements, and the update installer. Beta APK available on GitHub."
 });
+
+// v0.8.6.3 homepage and update archive localization
+Object.assign(english, {
+  "Astraryx v0.8.6.3: missões diárias e semanais, ajustes de equipamentos, Grondar e Arena PvP. APK Beta disponível no GitHub.": "Astraryx v0.8.6.3: daily and weekly missions, equipment balancing, Grondar, and PvP Arena. Beta APK on GitHub.",
+  "Com a fase online iniciada na v0.8.0, a v0.8.6.3 traz missões diárias e semanais, ajustes de equipamentos e melhorias no Grondar e na Arena PvP.": "Since the online launch in v0.8.0, v0.8.6.3 brings daily and weekly missions, equipment adjustments, and improvements to Grondar and PvP Arena.",
+  "09 NOV 2026 · V0.8.6.3 · NOVAS MISSÕES": "NOV 9, 2026 · V0.8.6.3 · NEW MISSIONS",
+  "Um novo ciclo de desafios.": "A new cycle of challenges.",
+  "3 missões diárias, 5 semanais, recompensas em gemas, balanceamento de equipamentos e melhorias no Grondar e na Arena.": "3 daily missions, 5 weekly missions, gem rewards, equipment balancing, and Grondar and Arena improvements.",
+  "ATUALIZAÇÃO EM DESTAQUE · V0.8.6.3": "FEATURED UPDATE · V0.8.6.3",
+  "A v0.8.6.3 reformula as missões, com 3 diárias e 5 semanais, oferece gemas como recompensa, ajusta as resistências dos equipamentos e aprimora Grondar e Arena. O quadro ao lado verifica automaticamente o APK Android disponível no GitHub.": "Version 0.8.6.3 reworks missions with 3 daily and 5 weekly objectives, gem rewards, equipment resistance adjustments, and Grondar and Arena improvements. The adjacent panel verifies the Android APK available on GitHub.",
+  "Nova atualização · V0.8.6.3": "New update · V0.8.6.3",
+  "09/11/2026 · APK PUBLICADO": "NOV 9, 2026 · APK RELEASED",
+  "3 missões diárias, 5 semanais, gemas, balanceamento de equipamentos e melhorias no Grondar e na Arena.": "3 daily and 5 weekly missions, gems, equipment balancing, and Grondar and Arena improvements.",
+  "Ler notas V0.8.6.3 →": "Read v0.8.6.3 notes →",
+  "Atualização anterior · V0.8.6": "Previous update · V0.8.6",
+  "06/11/2026 · WORLD BOSS": "NOV 6, 2026 · WORLD BOSS",
+  "Grondar, balanceamento de heróis e bosses, Arena, conquistas e melhorias do instalador.": "Grondar, hero and boss balancing, Arena, achievements, and installer improvements.",
+  "Ler notas V0.8.6 →": "Read v0.8.6 notes →",
+  "Notas anteriores · V0.8.2": "Earlier notes · V0.8.2",
+  "29/10/2026 · ARENA PVP": "OCT 29, 2026 · PVP ARENA",
+  "Combate PvP 5×5, Supabase, medalhas e melhorias de fluidez.": "5v5 PvP combat, Supabase, medals, and smoother gameplay.",
+  "Ler notas V0.8.2 →": "Read v0.8.2 notes →",
+  "Histórico de atualizações Astraryx Idle: v0.8.6.3 com novas missões, gemas, equipamentos, Grondar e Arena, além das versões anteriores.": "Astraryx Idle update history: v0.8.6.3 with new missions, gems, equipment balancing, Grondar, Arena, and previous updates.",
+  "ASTRARYX ONLINE · NOVEMBRO 2026": "ASTRARYX ONLINE · NOVEMBER 2026",
+  "A v0.8.6.3 amplia a fase online com 3 missões diárias, 5 semanais, recompensas em gemas, ajustes de equipamentos e melhorias no Grondar e na Arena. A disponibilidade do APK Android é confirmada automaticamente no quadro de download do site.": "Version 0.8.6.3 expands the online era with 3 daily and 5 weekly missions, gem rewards, equipment adjustments, and improvements to Grondar and Arena. Android APK availability is automatically verified in the site's download panel.",
+  "0.8.6.3 · APK publicado": "0.8.6.3 · APK released",
+  "Notas v0.8.6.3 · Missões e balanceamento": "v0.8.6.3 notes · Missions and balancing",
+  "V0.8.6.3 · 09/11/2026": "V0.8.6.3 · Nov 9, 2026",
+  "3 missões diárias, 5 semanais, recompensas em gemas, resistências recalibradas e melhorias no World Boss Grondar, na Arena PvP e na sincronização online.": "3 daily and 5 weekly missions, gem rewards, resistance adjustments, and improvements to World Boss Grondar, PvP Arena, and online synchronization.",
+  "Ler notas V0.8.6.3": "Read v0.8.6.3 notes"
+});
 const storageKey = 'astraforge_site_language_v1';
 const textSource = new WeakMap();
 const attributeSource = new WeakMap();
