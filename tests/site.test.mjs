@@ -27,11 +27,12 @@ test('visitor can reach APK early without losing release validation', () => {
   assert.match(read('releases.js'),/selectPublicApkRelease/);
 });
 
-test('v0.8.6 has a visible and accessible notes highlight next to the APK', () => {
+test('v0.8.6.3 has a visible and accessible notes highlight next to the APK', () => {
   assert.ok(home.includes('class="release-notes-feature"'));
   assert.ok(home.includes('aria-labelledby="release-notes-feature-title"'));
-  assert.ok(home.includes('href="updates/v0.8.6/index.html">Explorar todas as novidades'));
-  assert.ok(home.includes('Uma nova força. Uma nova jornada.'));
+  assert.ok(home.includes('href="updates/v0.8.6.3/index.html">Explorar todas as novidades'));
+  assert.ok(home.includes('Um novo ciclo de desafios.'));
+  assert.ok(existsSync(resolve(root,'updates/v0.8.6.3/index.html')));
   const css = read('assets/css/site-v3.css');
   assert.ok(css.includes('.release-notes-feature {'));
   assert.ok(css.includes('@media (max-width:510px)'));
@@ -83,14 +84,16 @@ test('public editorial update metadata is current, unique, and has notes pages',
     paths.add(update.path);
     assert.ok(existsSync(resolve(root,update.path)), 'Missing notes '+update.path);
   }
-  assert.equal(content.updates[0].slug,'v0.8.6');
+  assert.equal(content.updates[0].slug,'v0.8.6.3');
   assert.equal(content.updates[0].release_confirmed,true);
-  assert.equal(content.updates[1].slug,'v0.8.2');
+  assert.equal(content.updates[1].slug,'v0.8.6');
   assert.equal(content.updates[1].release_confirmed,true);
-  assert.equal(content.updates[2].slug,'v0.8.1');
-  assert.equal(content.updates[2].release_confirmed,false);
-  assert.equal(content.updates[3].slug,'v0.8.0');
-  assert.equal(content.updates[3].release_confirmed,true);
+  assert.equal(content.updates[2].slug,'v0.8.2');
+  assert.equal(content.updates[2].release_confirmed,true);
+  assert.equal(content.updates[3].slug,'v0.8.1');
+  assert.equal(content.updates[3].release_confirmed,false);
+  assert.equal(content.updates[4].slug,'v0.8.0');
+  assert.equal(content.updates[4].release_confirmed,true);
   const currentNotes = read('updates/v0.7.6/index.html');
   for (const marker of ['Dorrik','Convergência do Abismo','Catalisador','Português'])
     assert.ok(currentNotes.includes(marker), 'Missing v0.7.6 notes section: ' + marker);
@@ -108,7 +111,7 @@ test('public editorial update metadata is current, unique, and has notes pages',
 test('online beta notes, development preview and cinematic news are linked', () => {
   assert.ok(home.includes('class="portal-news"'));
   assert.ok(home.includes('href="updates/v0.8.0/index.html"'));
-  assert.ok(home.includes('href="updates/v0.8.1/index.html"'));
+  assert.ok(history.includes('href="v0.8.1/index.html"'));
   assert.ok(history.includes('Prévia anterior · V0.8.1'));
   assert.ok(existsSync(resolve(root,'updates/v0.8.0/index.html')));
   assert.ok(existsSync(resolve(root,'updates/v0.8.1/index.html')));
