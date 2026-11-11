@@ -10,10 +10,10 @@ export const siteConfig = Object.freeze({
   ga4MeasurementId: 'G-SZHF2LMYG0',
   // These test APKs remain available via the app update feed but not the site download widget.
   excludedReleaseTags: ['v0.8.6.1'],
-  previewVersion: '0.8.6',
+  previewVersion: '0.8.6.5',
   previewStatus: 'published',
   // Resolved against this module directory, so deep pages work in GitHub Pages.
   // The local notes path is used when the published APK matches previewVersion.
-  notesPath: 'updates/v0.8.6/index.html',
+  notesPath: 'updates/v0.8.6.5/index.html',
   requestTimeoutMs: 8000,
 });

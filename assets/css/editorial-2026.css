@@ -140,3 +140,12 @@ html[lang="en"] .patch-page .patch-pt{display:none}
 html[lang="en"] .patch-page .patch-en{display:block}
 @media(max-width:900px){.patch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:720px){.patch-hero{min-height:390px}.patch-hero-inner{padding-block:3.3rem}.patch-overview,.patch-photo{grid-template-columns:1fr}.patch-grid{grid-template-columns:1fr}.patch-photo img{height:280px}.patch-photo>div{padding:1.4rem}}
+
+/* v0.8.6.5: showcase the new Forge using actual gameplay imagery */
+.portal-feature--forge{background:linear-gradient(115deg,#101a30,#1a132a);isolation:isolate}
+.portal-feature--forge:before{content:"";position:absolute;inset:-12px;background:linear-gradient(90deg,#100d1ab5,#08192d88),url('../../updates/v0.8.6.5/media/forge-hub.webp') 50% 40%/cover;filter:blur(18px) saturate(.8);opacity:.88;z-index:-1}
+.portal-feature--forge img{width:75%;left:38%;right:auto;object-position:center 40%;object-fit:contain;filter:drop-shadow(0 18px 50px #02050c99);opacity:.78;transform:none}
+.portal-feature--forge:hover img{transform:scale(1.025)}
+.portal-feature--forge:after{background:linear-gradient(0deg,#050d1ff8 0%,#071525b5 48%,#07152518 100%)}
+.chronicle-hero{background:linear-gradient(95deg,#06101df5 8%,#09182ce0 65%,#09182cb0),url('../../updates/v0.8.6.5/media/forge-hub.webp') 50% 44%/cover}
+@media(max-width:740px){.portal-feature--forge img{width:115%;left:21%;opacity:.64}}

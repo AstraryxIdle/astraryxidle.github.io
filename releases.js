@@ -1,6 +1,6 @@
-import { siteConfig } from './config.js?v=20261106-v0861-test';
+import { siteConfig } from './config.js?v=20261111-v0865';
 import { trackEvent } from './analytics.js';
-import { t } from './i18n.js';
+import { t } from './i18n.js?v=20261111-v0865';
 
 const moduleRoot = new URL('./', import.meta.url);
 const messages = Object.freeze({

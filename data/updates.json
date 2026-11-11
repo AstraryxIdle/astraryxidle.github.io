@@ -3,6 +3,32 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.6.5",
+      "slug": "v0.8.6.5",
+      "title": "A Forja renasceu.",
+      "title_origin": "Vídeo de gameplay da v0.8.6.5 e notas oficiais do APK",
+      "summary": "Reformulação visual da Forja e das telas de Mira, Nymeris e Dorrik, com catálogos, prévias, materiais e navegação melhorados.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-11T05:53:56Z",
+      "document_date": "2026-11-11",
+      "path": "updates/v0.8.6.5/index.html"
+    },
+    {
+      "version": "0.8.6.4",
+      "slug": "v0.8.6.4",
+      "title": "Grondar: combate mais fluido.",
+      "title_origin": "Notas públicas da Release v0.8.6.4",
+      "summary": "Reformulação do World Boss Grondar usando o motor de combate local, sincronização de resultados e recuperação de envios pendentes.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-10T08:17:49Z",
+      "document_date": "2026-11-10",
+      "path": "updates/v0.8.6.4/index.html"
+    },
+    {
       "version": "0.8.6.3",
       "slug": "v0.8.6.3",
       "title": "Um novo ciclo de desafios.",
