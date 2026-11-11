@@ -148,4 +148,4 @@ html[lang="en"] .patch-page .patch-en{display:block}
 .portal-feature--forge:hover img{transform:scale(1.025)}
 .portal-feature--forge:after{background:linear-gradient(0deg,#050d1ff8 0%,#071525b5 48%,#07152518 100%)}
 .chronicle-hero{background:linear-gradient(95deg,#06101df5 8%,#09182ce0 65%,#09182cb0),url('../../updates/v0.8.6.5/media/forge-hub.webp') 50% 44%/cover}
-@media(max-width:740px){.portal-feature--forge img{width:115%;left:21%;opacity:.64}}
+@media(max-width:740px){.portal-feature--forge img{width:100%;left:0;opacity:.64;object-fit:cover;object-position:center 25%}}

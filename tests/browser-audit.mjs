@@ -89,7 +89,7 @@ try {
     await page.locator('[data-hero-role="todos"]').click();
     check((await page.locator('.character:visible').count())===12,width+' hero total not 12');
     await page.locator('[data-gallery-category="equipamento"]').click();
-    check((await page.locator('.gallery [data-gallery]:visible').count())===1,width+' gallery equipment count');
+    check((await page.locator('.gallery [data-gallery]:visible').count())===4,width+' gallery equipment count');
     await page.locator('[data-gallery-category="todos"]').click();
     const firstShot=page.locator('[data-gallery]').first();
     await firstShot.click();

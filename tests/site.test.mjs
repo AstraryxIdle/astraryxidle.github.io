@@ -108,9 +108,9 @@ test('public editorial update metadata is current, unique, and has notes pages',
 });
 
 
-test('online beta notes, development preview and cinematic news are linked', () => {
+test('new Forge notes, archived previews and cinematic news are linked', () => {
   assert.ok(home.includes('class="portal-news"'));
-  assert.ok(home.includes('href="updates/v0.8.0/index.html"'));
+  assert.ok(home.includes('href="updates/v0.8.6.5/index.html"'));
   assert.ok(history.includes('href="v0.8.1/index.html"'));
   assert.ok(history.includes('Arquivo histórico · V0.8.1'));
   assert.ok(existsSync(resolve(root,'updates/v0.8.0/index.html')));
