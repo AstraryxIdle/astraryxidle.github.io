@@ -1,4 +1,4 @@
-import { mountReleases } from './releases.js?v=20261111-v0865';
+import { mountReleases } from './releases.js?v=20261115-v0869';
 import { mountAnalytics, trackEvent } from './analytics.js';
 import { mountLanguagePicker, t, translateSubtree } from './i18n.js?v=20261115-v0869';
 mountLanguagePicker();
