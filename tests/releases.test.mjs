@@ -290,9 +290,9 @@ test('accepts a valid APK from the dedicated distribution repository', () => {
 });
 
 test('older v0.8.6.5 release keeps its historical public release notes URL', () => {
-  const previous = release({tag_name: 'v0.8.6.5'});
+  const previous = release({tag_name: 'v0.8.6.5', html_url: `${repository}/releases/tag/v0.8.6.5`});
   const selected = exported('selectPublicApkRelease')([previous]);
-  assert.equal(selected.notesUrl, `${repository}/releases/tag/v0.5.2`);
+  assert.equal(selected.notesUrl, `${repository}/releases/tag/v0.8.6.5`);
 });
 
 test('uses the legacy repository only if the distribution repo has no public APK', async () => {
