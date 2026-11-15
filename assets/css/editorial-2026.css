@@ -149,3 +149,10 @@ html[lang="en"] .patch-page .patch-en{display:block}
 .portal-feature--forge:after{background:linear-gradient(0deg,#050d1ff8 0%,#071525b5 48%,#07152518 100%)}
 .chronicle-hero{background:linear-gradient(95deg,#06101df5 8%,#09182ce0 65%,#09182cb0),url('../../updates/v0.8.6.5/media/forge-hub.webp') 50% 44%/cover}
 @media(max-width:740px){.portal-feature--forge img{width:100%;left:0;opacity:.64;object-fit:cover;object-position:center 25%}}
+/* 0.8.6.9 homepage: Morgana artwork, without the previous Forge backdrop. */
+.portal-feature--morgana{background:radial-gradient(circle at 76% 22%,#51265b 0%,#19182d 39%,#081321 82%);isolation:isolate}
+.portal-feature--morgana:before{content:"";position:absolute;inset:-12px;background:linear-gradient(90deg,#081020a8,#17112533),url('../../updates/v0.8.6.9/media/morgana-eclipse-promo.svg') 62% 38%/cover;filter:blur(21px) saturate(.8);opacity:.48;z-index:-1}
+.portal-feature--morgana>img{width:71%;left:35%;right:auto;object-fit:contain;object-position:center 42%;opacity:.94;filter:drop-shadow(0 16px 42px #05050cbb);transform:none}
+.portal-feature--morgana:hover>img{transform:scale(1.025)}
+.portal-feature--morgana:after{background:linear-gradient(0deg,#060d1ff9 0%,#0a1325e3 31%,#0b112177 66%,#0a10291f 100%)}
+@media(max-width:740px){.portal-feature--morgana>img{width:100%;left:0;object-fit:cover;object-position:center 26%;opacity:.7}}
