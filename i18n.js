@@ -1,5 +1,15 @@
 // Curated English copy for the public website. The original Portuguese stays in HTML.
 const english = {
+  "Nova atualização · V0.8.6.9": "New update · V0.8.6.9",
+  "15/11/2026 · MORGANA": "NOV 15, 2026 · MORGANA",
+  "Morgana traz Sangramento, Tempestade das Almas, sete novas foices e melhorias na Arena PvP.": "Morgana brings Bleeding, Soul Tempest, seven new scythes, and improvements to PvP Arena.",
+  "Ler notas V0.8.6.9 →": "Read V0.8.6.9 notes →",
+  "Atualização anterior · V0.8.6.5": "Previous update · V0.8.6.5",
+  "11/11/2026 · A NOVA FORJA": "NOV 11, 2026 · THE NEW FORGE",
+  "Mira, Nymeris e Dorrik ganharam novas telas de criação, catálogos reformulados e melhorias na Grande Têmpera.": "Mira, Nymeris, and Dorrik gained new crafting screens, revamped catalogs, and improvements to the Great Tempering.",
+  "10/11/2026 · GRONDAR": "NOV 10, 2026 · GRONDAR",
+  "World Boss mais fluido.": "Smoother World Boss battles.",
+  "Grondar passou a utilizar o combate local da campanha, enviando o resultado ao fim da batalha.": "Grondar now uses the campaign's local combat system, submitting the result after the battle.",
   "Astraryx Idle v0.8.6.9: Morgana, a Ceifeira do Eclipse, chega com Sangramento, Tempestade das Almas e melhorias na Arena PvP. APK Beta Android.": "Astraryx Idle v0.8.6.9: Morgana, the Eclipse Reaper, brings Bleeding, Soul Tempest, and PvP Arena improvements. Android Beta APK.",
   "Astraryx v0.8.6.9: Morgana chega com habilidades, foices e melhorias na Arena PvP. APK Beta disponível no GitHub.": "Astraryx v0.8.6.9: Morgana arrives with abilities, scythes, and PvP Arena improvements. Beta APK on GitHub.",
   "Arte promocional temática de Morgana, a Ceifeira do Eclipse": "Thematic promotional art of Morgana, the Eclipse Reaper",
