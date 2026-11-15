@@ -18,7 +18,7 @@ O menu, os filtros, as mensagens da consulta a GitHub Releases e a faixa de cons
 
 ## O que o visitante encontra
 
-- Página inicial com os cinco mundos, doze heróis jogáveis e sistemas de evolução.
+- Página inicial com os cinco mundos, treze heróis jogáveis e sistemas de evolução.
 - Capturas reais do runtime Godot, com galeria ampliável e filtros.
 - Busca por versão e assunto em [Atualizações](updates/index.html).
 - Consulta **sem autenticação** à API pública do GitHub Releases: primeiro em `astraryx-releases`, com fallback ao repositório antigo; o site só exibe APK publicado, carregado e válido. Releases Beta públicas também são aceitas; rascunhos não são ofertados.
