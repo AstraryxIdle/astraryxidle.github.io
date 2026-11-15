@@ -3,6 +3,19 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.6.9",
+      "slug": "v0.8.6.9",
+      "title": "Morgana: a Ceifeira do Eclipse.",
+      "title_origin": "Notas oficiais da Release pública v0.8.6.9",
+      "summary": "Morgana chega ao elenco com Sangramento e Tempestade das Almas; sete novas foices, seis ícones de habilidade e otimizações da Arena PvP.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-15T13:49:21Z",
+      "document_date": "2026-11-15",
+      "path": "updates/v0.8.6.9/index.html"
+    },
+    {
       "version": "0.8.6.5",
       "slug": "v0.8.6.5",
       "title": "A Forja renasceu.",
