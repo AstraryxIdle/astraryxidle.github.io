@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const mime = { '.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8',
   '.js':'text/javascript; charset=utf-8', '.json':'application/json; charset=utf-8',
-  '.webp':'image/webp', '.png':'image/png', '.svg':'image/svg+xml', '.jpg':'image/jpeg' };
+  '.webp':'image/webp', '.png':'image/png', '.svg':'image/svg+xml', '.gif':'image/gif', '.jpg':'image/jpeg' };
 const server = createServer((req,res) => {
   let path;
   try {
@@ -85,9 +85,9 @@ try {
     check((await page.locator('#site-nav a[href="#mundos"]').innerText())==='Mundos',width+' original navigation not restored');
     const damage=page.locator('[data-hero-role="dano"]');
     await damage.click();
-    check((await page.locator('.character:visible').count())===6,width+' filtered heroes not 6');
+    check((await page.locator('.character:visible').count())===7,width+' filtered heroes not 7');
     await page.locator('[data-hero-role="todos"]').click();
-    check((await page.locator('.character:visible').count())===12,width+' hero total not 12');
+    check((await page.locator('.character:visible').count())===13,width+' hero total not 13');
     await page.locator('[data-gallery-category="equipamento"]').click();
     check((await page.locator('.gallery [data-gallery]:visible').count())===4,width+' gallery equipment count');
     await page.locator('[data-gallery-category="todos"]').click();
@@ -125,6 +125,15 @@ try {
     const updateWidth=await page.evaluate(()=>document.documentElement.scrollWidth);
     check(updateWidth<=width+2,width+' updates page horizontal overflow '+updateWidth);
     console.log('PASS',width,'homepage + filters + dialog + search + downloads');
+    if (width === 390) {
+      await page.goto(base+'updates/v0.8.6.9/',{waitUntil:'networkidle'});
+      check((await page.locator('h1').innerText()).includes('Morgana'), 'v0.8.6.9 title missing');
+      check((await page.locator('img[src="media/morgana-eclipse-promo.svg"]').count()) === 1,'Morgana promo missing');
+      const gif = page.locator('img[src="media/morgana-eclipse.gif"]');
+      await gif.evaluate(img => img.decode());
+      check(await gif.evaluate(img => img.naturalWidth > 0),'Morgana GIF missing');
+      check((await page.locator('a[href*="releases/tag/v0.8.6.9"]').count()) >= 1,'Morgana APK link missing');
+    }
     await page.close();
   }
 
