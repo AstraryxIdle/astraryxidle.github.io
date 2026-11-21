@@ -1,6 +1,6 @@
-import { siteConfig } from './config.js?v=20261115-v0869';
+import { siteConfig } from './config.js?v=20261121-v0870';
 import { trackEvent } from './analytics.js';
-import { t } from './i18n.js?v=20261115-v0869';
+import { t } from './i18n.js?v=20261121-v0870';
 
 const moduleRoot = new URL('./', import.meta.url);
 const messages = Object.freeze({
@@ -55,11 +55,13 @@ export function selectPublicApkRelease(list, options = {}) {
     if (excluded.has(item.tag_name.trim().toLowerCase())) continue;
     const published = Date.parse(item.published_at);
     if (!Number.isFinite(published) || !Array.isArray(item.assets)) continue;
+    const tagName = item.tag_name.trim();
+    const expectedApk = config.releaseApkByTag?.[tagName];
     const apk = item.assets.find(asset => asset && typeof asset.name === 'string' && /\.apk$/i.test(asset.name)
+      && (!expectedApk || asset.name === expectedApk)
       && asset.state === 'uploaded' && Number.isFinite(asset.size) && asset.size > 0
       && repositoryUrl(asset.browser_download_url, config, 'apk'));
     if (!apk) continue;
-    const tagName = item.tag_name.trim();
     const releaseUrl = repositoryUrl(item.html_url, config, 'notes');
     candidates.push({
       tagName,

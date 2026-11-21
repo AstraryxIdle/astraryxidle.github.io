@@ -156,3 +156,7 @@ html[lang="en"] .patch-page .patch-en{display:block}
 .portal-feature--morgana:hover>img{transform:scale(1.025)}
 .portal-feature--morgana:after{background:linear-gradient(0deg,#060d1ff9 0%,#0a1325e3 31%,#0b112177 66%,#0a10291f 100%)}
 @media(max-width:740px){.portal-feature--morgana>img{width:100%;left:0;object-fit:cover;object-position:center 26%;opacity:.7}}
+
+.portal-feature--grondar{background:radial-gradient(ellipse at 67% 34%,#5e3729 0%,#2f202b 53%,#101a2c 100%)}
+.portal-feature--grondar img{object-fit:contain;object-position:center 18%;opacity:.94}
+.portal-feature--grondar:after{background:linear-gradient(0deg,#05101f 0%,#101524cb 28%,#06112205 68%)}

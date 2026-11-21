@@ -3,6 +3,19 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.7.0",
+      "slug": "v0.8.7.0",
+      "title": "Astraryx Idle 0.8.7.0",
+      "title_origin": "Notas oficiais da Release pública v0.8.7.0",
+      "summary": "APK 24,53% menor, qualidade gráfica ajustável e resgate direto no correio. Grondar é compatível com a nova versão e Morgana já aparece no ranking de heróis.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": "2026-11-21T10:39:57Z",
+      "document_date": "2026-11-21",
+      "path": "updates/v0.8.7.0/index.html"
+    },
+    {
       "version": "0.8.6.9",
       "slug": "v0.8.6.9",
       "title": "Morgana: a Ceifeira do Eclipse.",
