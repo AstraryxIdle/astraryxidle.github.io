@@ -1,4 +1,4 @@
-import { siteConfig } from './config.js?v=20261123-v0871';
+import { siteConfig } from './config.js?v=20261126-v0872';
 import { trackEvent } from './analytics.js';
 import { t } from './i18n.js?v=20261123-v0871';
 

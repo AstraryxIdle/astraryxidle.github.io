@@ -160,3 +160,8 @@ html[lang="en"] .patch-page .patch-en{display:block}
 .portal-feature--grondar{background:radial-gradient(ellipse at 67% 34%,#5e3729 0%,#2f202b 53%,#101a2c 100%)}
 .portal-feature--grondar img{object-fit:contain;object-position:center 18%;opacity:.94}
 .portal-feature--grondar:after{background:linear-gradient(0deg,#05101f 0%,#101524cb 28%,#06112205 68%)}
+
+.portal-feature--campaign img{object-position:center top}
+.release-article .section{padding-block:clamp(1.5rem,4vw,3rem)}
+.release-article .section:first-child{padding-top:clamp(2.5rem,7vw,4.5rem)}
+.release-campaign-preview{display:block;width:100%;height:auto;margin-top:1.5rem;border:1px solid #c8a96d50;border-radius:.5rem}

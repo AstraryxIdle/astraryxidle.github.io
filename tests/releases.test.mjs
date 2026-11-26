@@ -325,14 +325,14 @@ test('v0.8.7.0 offers only the revised APK when multiple builds share the releas
   assert.equal(select([{ ...update, assets: [original] }]), null);
 });
 
-test('v0.8.7.1 selects the signed-feed APK and local release notes', () => {
+test('v0.8.7.2 selects the signed-feed APK and local release notes', () => {
   const repo = 'https://github.com/AstraryxIdle/astraryx-releases';
-  const tag = 'v0.8.7.1';
-  const name = 'Astraryx-Idle-v0.8.7.1.apk';
+  const tag = 'v0.8.7.2';
+  const name = 'Astraryx-Idle-v0.8.7.2.apk';
   const url = `${repo}/releases/download/${tag}/${name}`;
   const update = release({ tag_name: tag, prerelease: true, html_url: `${repo}/releases/tag/${tag}`,
     assets: [asset({ name, browser_download_url: url })] });
   const selected = exported('selectPublicApkRelease')([update]);
   assert.equal(selected.downloadUrl, url);
-  assert.equal(selected.notesUrl, new URL('../updates/v0.8.7.1/index.html', import.meta.url).href);
+  assert.equal(selected.notesUrl, new URL('../updates/v0.8.7.2/index.html', import.meta.url).href);
 });

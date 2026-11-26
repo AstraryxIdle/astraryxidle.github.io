@@ -23,19 +23,22 @@ test('visitor can reach APK early without losing release validation', () => {
   for (const hook of ['data-release-version','data-release-status','data-release-download','data-release-notes','data-release-action','data-release-size'])
     assert.ok(home.includes(hook), 'Missing release hook: ' + hook);
   assert.match(home,/releases\.js|app\.js/);
-  assert.ok(read('config.js').includes("previewVersion: '0.8.7.1'"));
+  assert.ok(read('config.js').includes("previewVersion: '0.8.7.2'"));
   assert.match(read('releases.js'),/selectPublicApkRelease/);
 });
 
-test('v0.8.7.1 has a visible and accessible notes highlight next to the APK', () => {
+test('v0.8.7.2 has a visible and accessible notes highlight next to the APK', () => {
   assert.ok(home.includes('class="release-notes-feature"'));
   assert.ok(home.includes('aria-labelledby="release-notes-feature-title"'));
-  assert.ok(home.includes('href="updates/v0.8.7.1/index.html">Explorar todas as novidades'));
-  assert.ok(home.includes('Astraryx Idle 0.8.7.1'));
+  assert.ok(home.includes('href="updates/v0.8.7.2/index.html">Explorar todas as novidades'));
+  assert.ok(home.includes('Astraryx Idle 0.8.7.2'));
+  assert.match(read('updates/v0.8.7.2/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.2\/Astraryx-Idle-v0\.8\.7\.2\.apk"/);
+  assert.ok(existsSync(resolve(root,'updates/v0.8.7.2/cinco-mundos.jpg')));
   assert.match(read('updates/v0.8.7.1/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.1\/Astraryx-Idle-v0\.8\.7\.1\.apk"/);
   assert.match(read('updates/v0.8.7.0/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.0\/Astraryx-Idle-v0\.8\.7\.0-r2\.apk"/);
   assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.0/'));
   assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.1/'));
+  assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.2/'));
   assert.ok(home.includes('<h3>Morgana</h3>'));
   assert.ok(existsSync(resolve(root,'updates/v0.8.6.9/media/morgana-eclipse-promo.svg')));
   assert.ok(existsSync(resolve(root,'updates/v0.8.6.9/media/morgana-eclipse.gif')));
@@ -69,8 +72,8 @@ test('progressive enhancement includes hero filters, gallery filters and searcha
   assert.ok(read('assets/css/site-v3.css').includes('.character[hidden]'));
 });
 
-test('homepage and historical index have no missing local href/src references', () => {
-  for (const page of ['index.html','updates/index.html']) {
+test('homepage, historical index and current notes have no missing local href/src references', () => {
+  for (const page of ['index.html','updates/index.html','updates/v0.8.7.2/index.html']) {
     const content=read(page);
     const links=[...content.matchAll(/(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
     for (const href of links) {
@@ -91,7 +94,7 @@ test('public editorial update metadata is current, unique, and has notes pages',
     paths.add(update.path);
     assert.ok(existsSync(resolve(root,update.path)), 'Missing notes '+update.path);
   }
-  for (const [index, slug] of ['v0.8.7.1','v0.8.7.0','v0.8.6.9','v0.8.6.5','v0.8.6.4','v0.8.6.3','v0.8.6','v0.8.2'].entries()) {
+  for (const [index, slug] of ['v0.8.7.2','v0.8.7.1','v0.8.7.0','v0.8.6.9','v0.8.6.5','v0.8.6.4','v0.8.6.3','v0.8.6','v0.8.2'].entries()) {
     assert.equal(content.updates[index].slug, slug);
     assert.equal(content.updates[index].release_confirmed, true);
   }
