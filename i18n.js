@@ -1,6 +1,7 @@
 // Curated English copy for the public website. The original Portuguese stays in HTML.
 const english = {
   "Na tela de entrada, toque em “Ver atualizações” para consultar, baixar e instalar a atualização sem entrar na conta.": "On the sign-in screen, tap “Check for updates” to check, download, and install the update without signing in.",
+  "Quando uma atualização é obrigatória, a tela de login abre o atualizador.": "When an update is required, the sign-in screen opens the updater.",
   "O atualizador do Android está disponível na tela inicial, antes do login.": "The Android updater is available on the start screen before sign-in.",
   "Monte cinco heróis e explore 2.150 fases. A v0.8.7.3 permite atualizar o Android antes de entrar no jogo.": "Build a five-hero team and explore 2,150 stages. Version 0.8.7.3 lets you update Android before signing in to the game.",
   "Histórico de atualizações de Astraryx Idle, com as notas da v0.8.7.3 e de todas as versões anteriores.": "Astraryx Idle update history, with v0.8.7.3 release notes and all previous versions.",
