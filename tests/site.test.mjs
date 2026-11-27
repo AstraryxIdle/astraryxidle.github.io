@@ -35,11 +35,11 @@ test('v0.8.7.4 describes startup updates, Offline Rewards and the recovery APK',
   const notes = read('updates/v0.8.7.4/index.html');
   assert.match(notes, /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.4\/Astraryx-Idle-v0\.8\.7\.4\.apk"/);
   assert.match(notes, /Ao abrir o jogo no Android, o atualizador verifica se há uma nova versão antes do login/);
-  assert.match(notes, /Corrigido o fechamento do jogo ao abrir Recompensas Offline após o login/);
+  assert.match(notes, /Corrigido um bloqueio ao abrir ou coletar Recompensas Offline após o login/);
   assert.match(notes, /instale sobre o app existente/);
   assert.match(notes, /versão mais recente continua necessária para jogar online/);
   assert.match(read('updates/v0.8.7.3/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.3\/Astraryx-Idle-v0\.8\.7\.3\.apk"/);
-  assert.match(read('i18n.js'), /Fixed a crash when opening Offline Rewards after signing in/);
+  assert.match(read('i18n.js'), /Fixed a lock-up when opening or claiming Offline Rewards after sign-in/);
   assert.match(read('updates/v0.8.7.2/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.2\/Astraryx-Idle-v0\.8\.7\.2\.apk"/);
   assert.ok(existsSync(resolve(root,'updates/v0.8.7.2/cinco-mundos.jpg')));
   assert.match(read('updates/v0.8.7.1/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.1\/Astraryx-Idle-v0\.8\.7\.1\.apk"/);

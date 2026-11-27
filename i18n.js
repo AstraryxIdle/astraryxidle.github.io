@@ -2,9 +2,9 @@
 const english = {
   "Ao abrir o jogo no Android, o atualizador verifica se há uma nova versão antes do login.": "On Android, the updater checks for a new version before sign-in when the game opens.",
   "A atualização usa o instalador do Android e pode ser concluída sem entrar na conta.": "The update uses the Android installer and can be completed without signing in.",
-  "Corrigido o fechamento do jogo ao abrir Recompensas Offline após o login.": "Fixed a crash when opening Offline Rewards after signing in.",
+  "Corrigido um bloqueio ao abrir ou coletar Recompensas Offline após o login.": "Fixed a lock-up when opening or claiming Offline Rewards after sign-in.",
   "Atualização automática antes do login e correção nas Recompensas Offline.": "Automatic updates before sign-in and a fix for Offline Rewards.",
-  "Monte cinco heróis e explore 2.150 fases. A v0.8.7.4 verifica atualizações ao abrir o jogo e corrige o fechamento nas Recompensas Offline.": "Build a five-hero team and explore 2,150 stages. Version 0.8.7.4 checks for updates at launch and fixes an Offline Rewards crash.",
+  "Monte cinco heróis e explore 2.150 fases. A v0.8.7.4 verifica atualizações ao abrir o jogo e corrige um bloqueio nas Recompensas Offline.": "Build a five-hero team and explore 2,150 stages. Version 0.8.7.4 checks for updates at launch and fixes an Offline Rewards lock-up.",
   "Astraryx Idle v0.8.7.4 para Android. Atualizações ao abrir o jogo e correção nas Recompensas Offline.": "Astraryx Idle v0.8.7.4 for Android. Updates at startup and an Offline Rewards fix.",
   "Histórico de atualizações de Astraryx Idle, com as notas da v0.8.7.4 e de todas as versões anteriores.": "Astraryx Idle update history, with v0.8.7.4 release notes and all previous versions.",
   "Se o atualizador da versão instalada falhar, baixe o APK oficial neste site pelo navegador do Android. Abra o arquivo e instale sobre o app existente para preservar o progresso local.": "If the updater in the installed version fails, download the official APK from this site in your Android browser. Open the file and install it over the existing app to preserve local progress.",
