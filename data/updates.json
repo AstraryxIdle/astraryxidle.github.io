@@ -3,6 +3,19 @@
   "locale": "pt-BR",
   "updates": [
     {
+      "version": "0.8.7.4",
+      "slug": "v0.8.7.4",
+      "title": "Astraryx Idle 0.8.7.4",
+      "title_origin": "Notas oficiais da Release pública v0.8.7.4",
+      "summary": "Atualização automática antes do login e correção nas Recompensas Offline.",
+      "status": "published_beta",
+      "status_label": "Beta pública com APK",
+      "release_confirmed": true,
+      "published_at": null,
+      "document_date": "2026-11-27",
+      "path": "updates/v0.8.7.4/index.html"
+    },
+    {
       "version": "0.8.7.3",
       "slug": "v0.8.7.3",
       "title": "Astraryx Idle 0.8.7.3",

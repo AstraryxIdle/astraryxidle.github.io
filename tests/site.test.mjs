@@ -23,20 +23,23 @@ test('visitor can reach APK early without losing release validation', () => {
   for (const hook of ['data-release-version','data-release-status','data-release-download','data-release-notes','data-release-action','data-release-size'])
     assert.ok(home.includes(hook), 'Missing release hook: ' + hook);
   assert.match(home,/releases\.js|app\.js/);
-  assert.ok(read('config.js').includes("previewVersion: '0.8.7.3'"));
+  assert.ok(read('config.js').includes("previewVersion: '0.8.7.4'"));
   assert.match(read('releases.js'),/selectPublicApkRelease/);
 });
 
-test('v0.8.7.3 explains recovery without login and links to the signed APK', () => {
+test('v0.8.7.4 describes startup updates, Offline Rewards and the recovery APK', () => {
   assert.ok(home.includes('class="release-notes-feature"'));
   assert.ok(home.includes('aria-labelledby="release-notes-feature-title"'));
-  assert.ok(home.includes('href="updates/v0.8.7.3/index.html">Explorar todas as novidades'));
-  assert.ok(home.includes('Astraryx Idle 0.8.7.3'));
-  const notes = read('updates/v0.8.7.3/index.html');
-  assert.match(notes, /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.3\/Astraryx-Idle-v0\.8\.7\.3\.apk"/);
-  assert.match(notes, /Ver atualizações/);
+  assert.ok(home.includes('href="updates/v0.8.7.4/index.html">Explorar todas as novidades'));
+  assert.ok(home.includes('Astraryx Idle 0.8.7.4'));
+  const notes = read('updates/v0.8.7.4/index.html');
+  assert.match(notes, /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.4\/Astraryx-Idle-v0\.8\.7\.4\.apk"/);
+  assert.match(notes, /Ao abrir o jogo no Android, o atualizador verifica se há uma nova versão antes do login/);
+  assert.match(notes, /Corrigido o fechamento do jogo ao abrir Recompensas Offline após o login/);
   assert.match(notes, /instale sobre o app existente/);
   assert.match(notes, /versão mais recente continua necessária para jogar online/);
+  assert.match(read('updates/v0.8.7.3/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.3\/Astraryx-Idle-v0\.8\.7\.3\.apk"/);
+  assert.match(read('i18n.js'), /Fixed a crash when opening Offline Rewards after signing in/);
   assert.match(read('updates/v0.8.7.2/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.2\/Astraryx-Idle-v0\.8\.7\.2\.apk"/);
   assert.ok(existsSync(resolve(root,'updates/v0.8.7.2/cinco-mundos.jpg')));
   assert.match(read('updates/v0.8.7.1/index.html'), /href="https:\/\/github\.com\/AstraryxIdle\/astraryx-releases\/releases\/download\/v0\.8\.7\.1\/Astraryx-Idle-v0\.8\.7\.1\.apk"/);
@@ -45,6 +48,7 @@ test('v0.8.7.3 explains recovery without login and links to the signed APK', () 
   assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.1/'));
   assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.2/'));
   assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.3/'));
+  assert.ok(read('sitemap.xml').includes('/updates/v0.8.7.4/'));
   assert.ok(home.includes('<h3>Morgana</h3>'));
   assert.ok(existsSync(resolve(root,'updates/v0.8.6.9/media/morgana-eclipse-promo.svg')));
   assert.ok(existsSync(resolve(root,'updates/v0.8.6.9/media/morgana-eclipse.gif')));
@@ -79,7 +83,7 @@ test('progressive enhancement includes hero filters, gallery filters and searcha
 });
 
 test('homepage, historical index and current notes have no missing local href/src references', () => {
-  for (const page of ['index.html','updates/index.html','updates/v0.8.7.3/index.html','updates/v0.8.7.2/index.html']) {
+  for (const page of ['index.html','updates/index.html','updates/v0.8.7.4/index.html','updates/v0.8.7.3/index.html','updates/v0.8.7.2/index.html']) {
     const content=read(page);
     const links=[...content.matchAll(/(?:href|src)="([^"]+)"/g)].map(m=>m[1]);
     for (const href of links) {
@@ -100,7 +104,7 @@ test('public editorial update metadata is current, unique, and has notes pages',
     paths.add(update.path);
     assert.ok(existsSync(resolve(root,update.path)), 'Missing notes '+update.path);
   }
-  for (const [index, slug] of ['v0.8.7.3','v0.8.7.2','v0.8.7.1','v0.8.7.0','v0.8.6.9','v0.8.6.5','v0.8.6.4','v0.8.6.3','v0.8.6','v0.8.2'].entries()) {
+  for (const [index, slug] of ['v0.8.7.4','v0.8.7.3','v0.8.7.2','v0.8.7.1','v0.8.7.0','v0.8.6.9','v0.8.6.5','v0.8.6.4','v0.8.6.3','v0.8.6','v0.8.2'].entries()) {
     assert.equal(content.updates[index].slug, slug);
     assert.equal(content.updates[index].release_confirmed, true);
   }
