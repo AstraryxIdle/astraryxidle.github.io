@@ -11,11 +11,11 @@ export const siteConfig = Object.freeze({
   // These test APKs remain available via the app update feed but not the site download widget.
   excludedReleaseTags: ['v0.8.6.1'],
   // Prefer the APK that the signed update feed serves for this tag.
-  releaseApkByTag: Object.freeze({ 'v0.8.7.0': 'Astraryx-Idle-v0.8.7.0-r2.apk', 'v0.8.7.1': 'Astraryx-Idle-v0.8.7.1.apk', 'v0.8.7.2': 'Astraryx-Idle-v0.8.7.2.apk', 'v0.8.7.3': 'Astraryx-Idle-v0.8.7.3.apk', 'v0.8.7.4': 'Astraryx-Idle-v0.8.7.4.apk' }),
-  previewVersion: '0.8.7.4',
+  releaseApkByTag: Object.freeze({ 'v0.8.7.0': 'Astraryx-Idle-v0.8.7.0-r2.apk', 'v0.8.7.1': 'Astraryx-Idle-v0.8.7.1.apk', 'v0.8.7.2': 'Astraryx-Idle-v0.8.7.2.apk', 'v0.8.7.3': 'Astraryx-Idle-v0.8.7.3.apk', 'v0.8.7.4': 'Astraryx-Idle-v0.8.7.4.apk', 'v0.8.7.5': 'Astraryx-Idle-v0.8.7.5.apk' }),
+  previewVersion: '0.8.7.5',
   previewStatus: 'published',
   // Resolved against this module directory, so deep pages work in GitHub Pages.
   // The local notes path is used when the published APK matches previewVersion.
-  notesPath: 'updates/v0.8.7.4/index.html',
+  notesPath: 'updates/v0.8.7.5/index.html',
   requestTimeoutMs: 8000,
 });

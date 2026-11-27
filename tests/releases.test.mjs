@@ -337,17 +337,17 @@ test('v0.8.7.2 remains a valid fallback APK with GitHub release notes', () => {
   assert.equal(selected.notesUrl, update.html_url);
 });
 
-test('v0.8.7.4 selects the signed-feed hotfix and keeps the previous APK available', () => {
+test('v0.8.7.5 selects the new signed-feed hotfix and keeps the previous APK available', () => {
   const repo = 'https://github.com/AstraryxIdle/astraryx-releases';
   const published = (tag, publishedAt) => {
     const name = `Astraryx-Idle-${tag}.apk`;
     return release({ tag_name: tag, prerelease: true, html_url: `${repo}/releases/tag/${tag}`, published_at: publishedAt,
       assets: [asset({ name, browser_download_url: `${repo}/releases/download/${tag}/${name}` })] });
   };
-  const prior = published('v0.8.7.3', '2026-11-26T23:49:30Z');
-  const hotfix = published('v0.8.7.4', '2026-11-27T12:00:00Z');
+  const prior = published('v0.8.7.4', '2026-11-27T12:19:27Z');
+  const hotfix = published('v0.8.7.5', '2026-11-27T13:00:00Z');
   const result = exported('selectPublicApkRelease')([prior, hotfix]);
   assert.equal(result.downloadUrl, hotfix.assets[0].browser_download_url);
-  assert.equal(result.notesUrl, new URL('../updates/v0.8.7.4/index.html', import.meta.url).href);
+  assert.equal(result.notesUrl, new URL('../updates/v0.8.7.5/index.html', import.meta.url).href);
   assert.equal(exported('selectPublicApkRelease')([prior]).downloadUrl, prior.assets[0].browser_download_url);
 });
